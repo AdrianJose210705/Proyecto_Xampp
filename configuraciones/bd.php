@@ -3,7 +3,6 @@ class BD {
     public static $instancia = null;
     public static function crearInstancia(){
         if (!isset(self::$instancia)){        
-            // Configuración para el docker
             $host = "localhost"; 
             $bd = "portafolio_db";
             $usuario = "root";

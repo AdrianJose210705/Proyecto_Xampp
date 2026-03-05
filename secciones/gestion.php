@@ -57,7 +57,7 @@ if ($accion != '') {
             break;
     }
 }
-//$conexionBD->exec("DROP TABLE IF EXISTS contactos") esto borra la base de dotos;
+//$conexionBD->exec("DROP TABLE IF EXISTS contactos") esto borra la base de datos;
 $conexionBD->exec("CREATE TABLE IF NOT EXISTS contactos (id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255), mensaje TEXT, fecha DATETIME)");
 $consulta = $conexionBD->prepare("SELECT * FROM contactos");
 $consulta->execute();

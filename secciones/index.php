@@ -8,7 +8,7 @@
 
 <?php
 if (isset($_POST['ejecutar_python'])) {
-    // Usamos comillas dobles escapadas para que Windows entienda los espacios
+
     $python = "\"C:/Users/Hector/AppData/Local/Programs/Python/Python314/python.exe\"";
     $script = "\"C:/xampp/htdocs/app-main/script/script.py\"";
     
@@ -16,14 +16,11 @@ if (isset($_POST['ejecutar_python'])) {
     
     exec($comando, $output);
     
-    // Esto es para que veas el error real si falla
+
     echo "<pre>";
     print_r($output);
     echo "</pre>";
     
-    // Comenta estas líneas hasta que veas que funciona
-    // header("Location: " . $_SERVER['PHP_SELF']);
-    // exit();
 }
 
 ?>

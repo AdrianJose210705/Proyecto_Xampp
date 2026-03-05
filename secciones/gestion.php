@@ -46,7 +46,7 @@ if ($accion != '') {
             $fecha=$contactos['fecha'];
             break;
         case "marcarLeido":
-            $sql = "UPDATE contactos SET leido = 1 WHERE ud = :id";
+            $sql = "UPDATE contactos SET leido = 1 WHERE id = :id";
             $consulta = $conexionBD->prepare($sql);
             $consulta->bindParam(':id', $id);
             $consulta->execute();

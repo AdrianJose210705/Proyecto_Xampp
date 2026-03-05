@@ -94,6 +94,11 @@
                     <form action="" method="post">
                         <input type="hidden" name="id" id="id" value="<?php echo $nombre['id']?>"/>
                         <input type="submit" value="Seleccionar" name="accion" class="btn btn-info"/>
+                        <?php if (!($nombre['leido'] ?? 0)) { ?>
+                            <button type="submit" value="marcarLeido" name="accion" class="btn btn-success">
+                            Leído
+                            </button>
+                        <?php } ?>
                     </form>
                     </td>
                 </tr>

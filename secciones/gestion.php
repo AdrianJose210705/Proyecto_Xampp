@@ -45,6 +45,12 @@ if ($accion != '') {
             $Mensaje=$contactos['mensaje'];
             $fecha=$contactos['fecha'];
             break;
+        case "marcarLeido":
+            $sql = "UPDATE contactos SET leido = 1 WHERE id = :id";
+            $consulta = $conexionBD->prepare($sql);
+            $consulta->bindParam(':id', $id);
+            $consulta->execute();
+            break;
     }
 }
 //$conexionBD->exec("DROP TABLE IF EXISTS contactos") esto borra la base de dotos;

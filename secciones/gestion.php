@@ -4,8 +4,8 @@ include_once '../configuraciones/bd.php';
 $conexionBD=BD::crearInstancia();
 
 $id=isset($_POST['id'])?$_POST['id']:'';
-$Nombre=isset($_POST['Nombre'])?$_POST['Nombre']:'';
-$Mensaje=isset($_POST['Mensaje'])?$_POST['Mensaje']:'';
+$Nombre=isset($_POST['Nombre'])?trim($_POST['Nombre']):'';
+$Mensaje=isset($_POST['Mensaje'])?trim($_POST['Mensaje']):'';
 $fecha=isset($_POST['fecha'])?$_POST['fecha']:date("Y-m-d H:i:s");
 $leido=isset($_POST['btncheck1'])?$_POST['btncheck1']:'';
 $accion=isset($_POST['accion'])?$_POST['accion']:'';
@@ -13,12 +13,16 @@ $accion=isset($_POST['accion'])?$_POST['accion']:'';
 if ($accion != '') {
     switch ($accion) {
         case 'agregar':
+            if ($Nombre !== '' && $Mensaje !== ''){
             $sql = "INSERT INTO contactos (id, nombre, mensaje, fecha) VALUES (NULL, :nombre, :mensaje, :fecha )";
             $consulta = $conexionBD->prepare($sql);
             $consulta->bindParam(':nombre', $Nombre);
             $consulta->bindParam(':mensaje', $Mensaje);
             $consulta->bindParam(':fecha', $fecha); 
             $consulta->execute();
+            } else {
+                echo "¡ERROR!";
+            }
             break;
         case 'editar':
             $sql="UPDATE contactos SET nombre=:nombre, mensaje=:mensaje, fecha=:fecha WHERE id=:id ";

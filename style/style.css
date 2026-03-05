@@ -10,8 +10,17 @@
     background: linear-gradient(to right, #0083B0, #00B4DB); 
 }
 
-.colo_derecho{
-    background: #56CCF2;  
+.color_derecho{
+    background: #78bed5;  
     background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  
-    background: linear-gradient(to right, #2F80ED, #56CCF2); 
+    background: linear-gradient(to right, #4991f0, #56CCF2); 
+}
+
+.color_izquierdo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
 }

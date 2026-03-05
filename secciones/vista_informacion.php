@@ -1,7 +1,12 @@
 <?php include('../template/cabecera.php')?>
 <?php include('../secciones/informacion.php')?>
 
-<?php foreach($listaNombre2 as $nombre){?>
+<style>
+    body{
+        background-color: dimgray;
+    }
+</style>
+
 <div class="container">
     <div class="row">
         <div class="col-12 color_principal text-center">
@@ -71,19 +76,37 @@
             <br>
             <img  style="border-radius: 20%;" src="../fotoperfil/Foto.jpg" alt="Imagen de perfil" class="rounded mx-auto d-block">
             <br>
-            <p class="text-center fst-italic text-light fs-5">Estudiante de la universidad de oriente nucleo de anzoategui aspirante a titulo de Ingeniero de Computacion.</p>
+            <p class="text-center fst-italic text-light fs-5">Estudiante de la Universidad de Oriente Nucleo de Anzoátegui aspirante a titulo de Ingeniero de Computacion.</p>
+            <br>
+            <br>
+            <br>
+            <img  style="border-radius: 20%;" src="../fotoperfil/pfpJF.jpg" alt="Imagen de perfil" class="rounded mx-auto d-block">
+            <br>
+            <p class="text-center fst-italic text-light fs-5">Estudiante de la Universidad de Oriente Nucleo de Anzoátegui aspirante a titulo de Ingeniero de Computacion.</p>
         </div>
         <div class="col-8 color_derecho">
             <p class="fs-3 text-light">Datos:</p>
-            <p class="fs-5">Nombre: <?php echo $nombre['nombre_alumno']?></p>
-            <p class="fs-5">Cedula: <?php echo $nombre['cedula']?></p>
-            <p class="fs-5">Universidad: <?php echo $nombre['universidad']?></p>
-            <p class="fs-5">Carrera: <?php echo $nombre['carrera']?></p>
-            <p class="fs-5">Edad: <?php echo $nombre['bio']?></p>
-            <p class="fs-5">Lenguajes de manejo: <?php echo $nombre['habilidades']?></p>
+            <?php foreach($listaNombre2 as $nombre2){?>
+            <p class="fs-5">Nombre: <?php echo $nombre2['nombre_alumno']?></p>
+            <p class="fs-5">Cedula: <?php echo $nombre2['cedula']?></p>
+            <p class="fs-5">Universidad: <?php echo $nombre2['universidad']?></p>
+            <p class="fs-5">Carrera: <?php echo $nombre2['carrera']?></p>
+            <p class="fs-5">Edad: <?php echo $nombre2['bio']?></p>
+            <p class="fs-5">Lenguajes de manejo: <?php echo $nombre2['habilidades']?></p>
+            <?php } ?>
+            <br>
+            <br>
+            <p class="fs-3 text-light">Datos:</p>
+            <?php foreach($listaNombre1 as $nombre1){?>
+            <p class="fs-5">Nombre: <?php echo $nombre1['nombre_alumno']?></p>
+            <p class="fs-5">Cedula: <?php echo $nombre1['cedula']?></p>
+            <p class="fs-5">Universidad: <?php echo $nombre1['universidad']?></p>
+            <p class="fs-5">Carrera: <?php echo $nombre1['carrera']?></p>
+            <p class="fs-5">Edad: <?php echo $nombre1['bio']?></p>
+            <p class="fs-5">Lenguajes de manejo: <?php echo $nombre1['habilidades']?></p>            
+            <?php } ?>
         </div>
     </div>
 </div>
-<?php } ?>
 
 <?php include('../template/pie.php')?>

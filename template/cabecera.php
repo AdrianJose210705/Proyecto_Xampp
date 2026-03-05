@@ -21,7 +21,7 @@
     </head>
     <body>
         <!-- Menu para navegar -->
-        <nav class="navbar navbar-expand navbar-light bg-light">
+        <nav class="navbar navbar-expand navbar-light bg-light color_principal">
             <div class="nav navbar-nav">
                 <a class="nav-item nav-link active" href="index.php">Inicio</a>
                 <a class="nav-item nav-link" href="vista_informacion.php">Informacion</a>

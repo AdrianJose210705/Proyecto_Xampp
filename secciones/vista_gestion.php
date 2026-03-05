@@ -1,11 +1,17 @@
 <?php include('../template/cabecera.php')?>
 <?php include('../secciones/gestion.php')?>
 
+<style>
+    body{
+        background-color:dimgray;
+    }
+</style>
+
 <div class="col-md-5">
 
 <form action="" method="post">
     <div class="card">
-    <div class="card-header">Gestion de datos</div>
+    <div class="card-header color_principal">Gestion de datos</div>
     <div class="card-body">
         <div class="mb-3">
     <label for="" class="form-label">ID</label>
@@ -58,7 +64,7 @@
 </div>
 <div class="col-md-7">
 <div class="card">
-<div class="card-header">Tabla de Gestion de datos</div>
+<div class="card-header color_principal">Tabla de Gestion de datos</div>
 <div class="card-body">
     <div
         class="table-responsive"

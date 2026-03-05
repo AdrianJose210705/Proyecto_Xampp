@@ -15,8 +15,15 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="../style/style.css"/>
     </head>
     <!-- Contenido -->
+    <style>
+        body{
+        background-color:dimgray;
+        }
+    </style>
+
     <body>
         <div class="container">
             <div class="row">
@@ -32,7 +39,7 @@
                     <br>
                     <form action="secciones/index.php" method="post">
                     <div class="card">
-                        <div class="card-header">Inicio de sesión</div>
+                        <div class="card-header color_principal">Inicio de sesión</div>
                         <!-- Titulo -->
                         <div class="card-body">
                             <div class="mb-3">

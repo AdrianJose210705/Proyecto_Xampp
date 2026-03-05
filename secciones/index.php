@@ -1,5 +1,11 @@
 <?php include('../template/cabecera.php')?>
 
+<style>
+    body{
+        background-color:dimgray;
+    }
+</style>
+
 <?php
 if (isset($_POST['ejecutar_python'])) {
     // Usamos comillas dobles escapadas para que Windows entienda los espacios

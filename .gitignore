@@ -1,0 +1,3 @@
+#Esto es para decirle al Git que no suba documentos sensibles:
+db_data/
+.env

@@ -9,38 +9,37 @@
 <?php
 if (isset($_POST['ejecutar_python'])) {
 
-    $python = "\"C:/Users/Hector/AppData/Local/Programs/Python/Python314/python.exe\"";
-    $script = "\"C:/xampp/htdocs/app-main/script/script.py\"";
+    $python = "\"C:/Users/Dipper/AppData/Local/Programs/Python/Python312/python.exe\"";
+    $script = "\"C:/Users/Dipper/Documents/GitHub/Proyecto_Xampp#/script/script.py\"";
     
     $comando = "$python $script 2>&1";
     
     exec($comando, $output);
     
-
-    echo "<pre>";
-    print_r($output);
-    echo "</pre>";
-    
+    if (!empty($output)) {
+        echo "<div class='alert alert-secondary'><pre>" . implode("\n", $output) . "</pre></div>";
+    }
 }
+
 
 ?>
 
 <div class="reporte-contenedor">
     <h3>Resumen de datos en el sistema</h3>
-<br>
-<pre>
-    <?php 
+    <br>
+    <pre><?php 
         clearstatcache();
-        if (file_exists('../reportes/reporte.txt')){
-            echo file_get_contents('../reportes/reporte.txt');
+        $ruta_txt = '../reportes/reporte.txt';
+        if (file_exists($ruta_txt)){
+            echo file_get_contents($ruta_txt);
         } else {
-            echo "El reporte aun no ha sido generado";
+            echo "El reporte aun no ha sido generado. Presiona Actualizar.";
         }
-    ?>
-    <form>
+    ?></pre>
+    
+    <form method="post">
         <button type="submit" name="ejecutar_python" class="btn btn-info">Actualizar</button>
     </form>
-</pre>
 </div>
 
-<?php include('../template/pie.php')?>      
+<?php include('../template/pie.php')?>

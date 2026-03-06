@@ -18,7 +18,7 @@ def generar_reporte():
         resultado = cursor.fetchone()
         total = resultado[0] if resultado else 0
 
-        ruta_reporte = "C:/xampp/htdocs/app-main/reportes/reporte.txt"
+        ruta_reporte = r"C:/Users/Dipper/Documents/GitHub/Proyecto_Xampp#/reportes/reporte.txt"
 
         with open(ruta_reporte, "w") as f:
             f.write("Reporte de Mensajes\n")

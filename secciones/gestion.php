@@ -21,7 +21,7 @@ if ($accion != '') {
             $consulta->bindParam(':fecha', $fecha); 
             $consulta->execute();
             } else {
-                echo "¡ERROR!";
+                echo "";
             }
             break;
         case 'editar':

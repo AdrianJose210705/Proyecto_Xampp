@@ -37,9 +37,22 @@
                     <br>
                     <br>
                     <br>
-                    <form action="secciones/index.php" method="post">
+                    <form action="Iniciar_sesion.php" method="post">
                     <div class="card">
-                        <div class="card-header color_principal">Inicio de sesión</div>
+                        <div class="card-header color_principal text-center">Inicio de sesión</div>
+                        <hr>
+                        <?php
+                            if (isset($_GET['error'])){
+                            ?>
+                            <p class="error">
+                                <?php 
+                                    echo $_GET['error']
+                                ?>
+                            </p>
+                        <?php
+                            }
+                        ?>
+                        <hr>
                         <!-- Titulo -->
                         <div class="card-body">
                             <div class="mb-3">

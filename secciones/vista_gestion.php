@@ -11,7 +11,7 @@
 
 <form action="" method="post">
     <div class="card">
-    <div class="card-header color_principal">Gestion de datos</div>
+    <div class="card-header color_principal text-center">Gestion de datos</div>
     <div class="card-body">
         <div class="mb-3">
     <label for="" class="form-label">ID</label>
@@ -64,13 +64,13 @@
 </div>
 <div class="col-md-7">
 <div class="card">
-<div class="card-header color_principal">Tabla de Gestion de datos</div>
+<div class="card-header color_principal text-center">Tabla de Gestion de datos</div>
 <div class="card-body">
     <div
         class="table-responsive"
     >
         <table
-            class="table"
+            class="table table table-striped"
         >
             <thead>
                 <tr>

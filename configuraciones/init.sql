@@ -51,3 +51,13 @@ VALUES (
     'SQL, Backend, Frontend, Docker, PHP, Python, C++',
     'Foto.jpg'
 );
+
+CREATE TABLE IF NOT EXISTS Incio (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    contraseña VARCHAR(255) NOT NULL,
+    nombre_completo VARCHAR(255) NOT NULL
+);
+
+INSERT INTO `incio` (`id`, `nombre`, `contraseña`, `nombre_completo`) VALUES 
+(NULL, 'Adrian', '1234', 'Adrian Figueroa');

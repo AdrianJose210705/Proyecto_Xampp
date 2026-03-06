@@ -25,6 +25,7 @@ if ($accion != '') {
             }
             break;
         case 'editar':
+            if ($Nombre !== '' && $Mensaje !== ''){
             $sql="UPDATE contactos SET nombre=:nombre, mensaje=:mensaje, fecha=:fecha WHERE id=:id ";
             $consulta = $conexionBD->prepare($sql);
             $consulta->bindParam(':id', $id);
@@ -33,6 +34,9 @@ if ($accion != '') {
             $consulta->bindParam(':fecha', $fecha);
             $consulta->execute();
             break;
+            } else {
+                echo "";
+            }
         case 'borrar':
             $sql="DELETE FROM contactos WHERE id=:id";
             $consulta = $conexionBD->prepare($sql);
